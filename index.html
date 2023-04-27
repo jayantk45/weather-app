@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <h1>Find Your Weather!</h1>
+
+        <div class="tab-container">
+            <p class="tab" data-userWeather>Your weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <div class="weather-container">
+
+            <!-- GRANT LOACTION CONTAINER  -->
+            <div class="sub-container grant-location-container">
+                <img src="./assets/location.png" alt="location" height="80" width="80" loading="lazy">
+                <p>Grant location Access</p>
+                <p>Allow access to get weather information</p>
+                <button class="btn" data-grantAccess>Grant Access</button>
+            </div>
+
+            <!-- SEARCH WEATHER FORM  -->
+            <form class="form-container" data-searchForm>
+                <input placeholder="Search for city..." data-searchInput>
+                <button class="btn" type="submit">
+                    <img src="./assets/search.png" alt="search" width="20" height="20" loading="lazy">
+                </button>
+            </form>
+
+            <!-- LOADING SCREEN CONTAINER  -->
+            <div class="sub-container loading-container">
+                <img src="./assets/loading.gif" alt="loading-gif" width="150" height="150">
+                <p>Loading</p>    
+            </div>
+
+            <div class="sub-container error404">
+                <img src="./assets/not-found.png" alt="error 404" width="400" height="400">
+                <p>Error 404</p>
+            </div>
+
+            <!-- SHOW WEATHER INFO  -->
+            <div class="sub-container user-info-container">
+
+                <!-- city name and flag  -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+
+                <!-- weather description  -->
+                <p data-weatherDesc></p>
+
+                <!-- weather icon  -->
+                <img data-weatherIcon>
+
+                <!-- temperature  -->
+                <p data-temp></p>
+
+                <!-- 3 cards parameters  -->
+                <div class="parameter-container">
+
+                    <!-- card 1  -->
+                    <div class="parameter">
+                        <img src="./assets/wind.png">
+                        <p>Windspeed</p>
+                        <p data-windspeed></p>
+                    </div>
+
+                    <!-- card 2  -->
+                    <div class="parameter">
+                        <img src="./assets/humidity.png">
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+
+                    <!-- card 3  -->
+                    <div class="parameter">
+                        <img src="./assets/cloud.png">
+                        <p>Clouds</p>
+                        <p data-cloudiness></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer>
+            <h5>Made by <a href="https://github.com/jayantk45">Jayant Karale</a></h5>
+        </footer>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
